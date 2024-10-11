@@ -8,7 +8,7 @@ function M:init(options)
 	M.super.init(self, options)
 end
 
-function M:update_status()
+function M.update_status(_)
 	local filepath = vim.api.nvim_buf_get_name(0)
 	if filepath == "" then
 		return ""
