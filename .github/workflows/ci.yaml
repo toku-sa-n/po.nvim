@@ -9,6 +9,14 @@ on:
       - main
 
 jobs:
+  luacheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+      - uses: lunarmodules/luacheck@cc089e3f65acdd1ef8716cc73a3eca24a6b845e4 # v1.2.0
+
   prettier:
     runs-on: ubuntu-latest
 
