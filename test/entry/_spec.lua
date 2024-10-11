@@ -1,0 +1,5 @@
+describe("fetch_under_cursor", function()
+	it("should work", function()
+		assert.are.equal(1, 1)
+	end)
+end)
