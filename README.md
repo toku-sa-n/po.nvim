@@ -1,4 +1,4 @@
-# `po.nvim`
+# po.nvim
 
 Neovim plugin for editing GNU gettext PO files
 
@@ -22,9 +22,9 @@ return {
 
 ## Usage
 
-### `po.nvim` component for `lualine.nvim`
+### po.nvim component for lualine.nvim
 
-Add the `po` component to your `lualine.nvim` configuration:
+Add the `po` component to your lualine.nvim configuration:
 
 ```lua
 lualine.setup({
