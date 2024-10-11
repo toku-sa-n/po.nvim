@@ -1,9 +1,25 @@
+local async = require("plenary.async")
+
 local M = {}
 
--- @param content string The content of the po file.
--- @return string The statistics text of the given po file content.
-local function fetch(content)
-	return "0 translated messages."
+---@param filename string The name of the po file.
+---@param statistics_lang string The language of the statistics text.
+---@return string|nil The statistics text of the given po file, or nil on an error.
+local function fetch(filename, statistics_lang)
+	local async_system = async.wrap(vim.system, 3)
+
+	local obj = async_system(
+		{ "msgfmt", "--statistics", "--output-file=/dev/null", filename },
+		{ env = { LANG = statistics_lang }, text = true }
+	)
+
+	if obj.code ~= 0 then
+		return
+	end
+
+	local s, _ = string.gsub(obj.stderr, "^%s*(.-)%s*$", "%1")
+
+	return s
 end
 
 M.fetch = fetch
