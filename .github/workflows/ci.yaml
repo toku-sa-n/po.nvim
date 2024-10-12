@@ -58,8 +58,9 @@ jobs:
 
       - name: Create `init.vim`
         run: |
-          echo "lua vim.opt.rtp:append(vim.fn.expand('$GITHUB_WORKSPACE/plenary.nvim')) \
-                source $GITHUB_WORKSPACE/plenary.nvim/plugin/plenary.vim" > $GITHUB_WORKSPACE/.config/nvim/init.vim
+          mkdir -p $HOME/.config/nvim
+          echo "lua vim.opt.rtp:append(vim.fn.expand('$HOME/plenary.nvim')) \
+                source $HOME/plenary.nvim/plugin/plenary.vim" > $HOME/.config/nvim/init.vim
 
       - name: Run tests
         run: nvim --headless -c "PlenaryBustedDirectory tests/"
