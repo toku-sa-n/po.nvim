@@ -45,6 +45,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout
@@ -54,12 +55,7 @@ jobs:
         run: sudo apt-get install -y gettext neovim
 
       - name: Clone Plenary
-        run: git clone https://github.com/nvim-lua/plenary.nvim
-
-      - name: env
-        run: |
-          pwd
-          ls
+        run: git clone https://github.com/nvim-lua/plenary.nvim $HOME/plenary.nvim
 
       - name: Create `init.vim`
         run: |
