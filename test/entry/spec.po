@@ -1,2 +1,5 @@
 msgid "This is a sample text."
 msgstr "これはサンプルテキストです。"
+
+msgid "This is another sample text."
+msgstr "これは別のサンプルテキストです。"
