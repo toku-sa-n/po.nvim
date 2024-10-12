@@ -63,4 +63,4 @@ jobs:
                 source $HOME/plenary.nvim/plugin/plenary.vim" > $HOME/.config/nvim/init.vim
 
       - name: Run tests
-        run: nvim --headless -c "PlenaryBustedDirectory tests/"
+        run: nvim --headless -c "PlenaryBustedDirectory test/"
