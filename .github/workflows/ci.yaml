@@ -56,6 +56,11 @@ jobs:
       - name: Clone Plenary
         run: git clone https://github.com/nvim-lua/plenary.nvim
 
+      - name: env
+        run: |
+          pwd
+          ls
+
       - name: Create `init.vim`
         run: |
           mkdir -p $HOME/.config/nvim
