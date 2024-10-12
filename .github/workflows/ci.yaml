@@ -56,6 +56,7 @@ jobs:
       - name: Install plenary.nvim
         run: |
           git clone https://github.com/nvim-lua/plenary.nvim $HOME/.local/share/nvim/site/plugin/plenary.nvim
+          cd $HOME/.local/share/nvim/site/plugin/plenary.nvim
           git checkout 50012918b2fc8357b87cff2a7f7f0446e47da174 # v0.1.4
 
       - name: Run tests
