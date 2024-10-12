@@ -42,3 +42,21 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: 0.20.0
           args: --check .
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+      - name: Install the plugin directory
+        run: mkdir -p $HOME/.local/share/nvim/site/plugin
+
+      - name: Install plenary.nvim
+        run: |
+          git clone https://github.com/nvim-lua/plenary.nvim $HOME/.local/share/nvim/site/plugin/plenary.nvim
+          git checkout 50012918b2fc8357b87cff2a7f7f0446e47da174 # v0.1.4
+
+      - name: Run tests
+        run: nvim --headless -c "PlenaryBustedDirectory tests/"
