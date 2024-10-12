@@ -62,5 +62,8 @@ jobs:
           echo "lua vim.opt.rtp:append(vim.fn.expand('$HOME/plenary.nvim')) \
                 source $HOME/plenary.nvim/plugin/plenary.vim" > $HOME/.config/nvim/init.vim
 
+      - name: Print `init.vim`
+        run: cat $HOME/.config/nvim/init.vim
+
       - name: Run tests
         run: nvim --headless -c "PlenaryBustedDirectory test/"
