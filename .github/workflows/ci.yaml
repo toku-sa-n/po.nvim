@@ -53,14 +53,13 @@ jobs:
       - name: Install Neovim
         run: sudo apt-get install -y neovim
 
-      - name: Install the plugin directory
-        run: mkdir -p $HOME/.local/share/nvim/site/plugin
+      - name: Clone Plenary
+        run: git clone https://github.com/nvim-lua/plenary.nvim
 
-      - name: Install plenary.nvim
+      - name: Create `init.vim`
         run: |
-          git clone https://github.com/nvim-lua/plenary.nvim $HOME/.local/share/nvim/site/plugin/plenary.nvim
-          cd $HOME/.local/share/nvim/site/plugin/plenary.nvim
-          git checkout 50012918b2fc8357b87cff2a7f7f0446e47da174 # v0.1.4
+          echo "lua vim.opt.rtp:append(vim.fn.expand('$GITHUB_WORKSPACE/plenary.nvim')) \
+                source $GITHUB_WORKSPACE/plenary.nvim/plugin/plenary.vim" > $GITHUB_WORKSPACE/.config/nvim/init.vim
 
       - name: Run tests
         run: nvim --headless -c "PlenaryBustedDirectory tests/"
