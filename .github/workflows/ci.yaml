@@ -59,7 +59,7 @@ jobs:
       - name: Create `init.vim`
         run: |
           mkdir -p $HOME/.config/nvim
-          echo "lua vim.opt.rtp:append(vim.fn.expand('$HOME/plenary.nvim')) \
+          echo "lua vim.opt.rtp:append(vim.fn.expand('$HOME/plenary.nvim')) \n\
                 source $HOME/plenary.nvim/plugin/plenary.vim" > $HOME/.config/nvim/init.vim
 
       - name: Print `init.vim`
