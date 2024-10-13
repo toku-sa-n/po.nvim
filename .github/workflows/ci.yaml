@@ -47,6 +47,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
+    strategy:
+      matrix:
+        include:
+          - neovim: [v0.10.1, v0.10.2]
+
     steps:
       - name: Checkout
         uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
@@ -59,7 +64,7 @@ jobs:
         # the Ubuntu repositories is outdated.
       - name: Download Neovim
         run: |
-          wget https://github.com/neovim/neovim/releases/download/v0.10.1/nvim.appimage -O $HOME/nvim.appimage
+          wget https://github.com/neovim/neovim/releases/download/${{ matrix.neovim }}/nvim.appimage -O $HOME/nvim.appimage
           chmod +x $HOME/nvim.appimage
 
       - name: Clone Plenary
