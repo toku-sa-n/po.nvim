@@ -2,8 +2,8 @@ local M = {}
 
 local function fetch_next()
 	return {
-		msgid = "This is another sample text.",
-		msgstr = "これは別のサンプルテキストです.",
+		msgid = "This is a sample text.",
+		msgstr = "これはサンプルテキストです。",
 	}
 end
 

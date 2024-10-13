@@ -6,8 +6,8 @@ describe("fetch_next", function()
 		assert.equals(1, cursor_line)
 
 		local expected = {
-			msgid = "This is another sample text.",
-			msgstr = "これは別のサンプルテキストです。",
+			msgid = "This is a sample text.",
+			msgstr = "これはサンプルテキストです。",
 		}
 		local actual = require("po.entry").fetch_next()
 
