@@ -5,13 +5,13 @@
 ---@field next fun(self) : string The next line content.
 local line_navigator = {}
 
----@return string The previous line content.
+---@return string previous_line previous line content.
 function line_navigator:previous()
 	self.current_line_number = self.current_line_number - 1
 	return self.get_line(self.current_line_number)
 end
 
----@return string The next line content.
+---@return string next_line next line content.
 function line_navigator:next()
 	self.current_line_number = self.current_line_number + 1
 	return self.get_line(self.current_line_number)
