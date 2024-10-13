@@ -29,6 +29,9 @@ jobs:
       - name: Install ninja
         run: sudo apt-get install -y ninja-build
 
+      - name: Clone Plenary to let LuaLS detect it
+        run: git clone https://github.com/nvim-lua/plenary.nvim
+
       - name: Clone Lua Language Server
         run: git clone https://github.com/LuaLS/lua-language-server $HOME/lua-language-server
 
