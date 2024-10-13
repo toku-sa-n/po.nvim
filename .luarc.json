@@ -16,6 +16,7 @@
   },
   "diagnostics.neededFileStatus": {
     "codestyle-check": "None!",
+    "no-unknown": "None!",
     "spell-check": "None!"
   }
 }
