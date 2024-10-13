@@ -12,5 +12,9 @@
     "type-check": "Opened",
     "unbalanced": "Opened",
     "unused": "Opened"
+  },
+  "diagnostics.neededFileStatus": {
+    "codestyle-check": "None!",
+    "spell-check": "None!"
   }
 }
