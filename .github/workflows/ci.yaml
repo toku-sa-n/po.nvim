@@ -52,6 +52,9 @@ jobs:
         include:
           - neovim: [v0.10.1, v0.10.2]
 
+    env:
+      NVIM_VERSION: ${{ matrix.neovim }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
@@ -64,7 +67,7 @@ jobs:
         # the Ubuntu repositories is outdated.
       - name: Download Neovim
         run: |
-          wget https://github.com/neovim/neovim/releases/download/${{ matrix.neovim }}/nvim.appimage -O $HOME/nvim.appimage
+          wget https://github.com/neovim/neovim/releases/download/$NVIM_VERSION/nvim.appimage -O $HOME/nvim.appimage
           chmod +x $HOME/nvim.appimage
 
       - name: Clone Plenary
