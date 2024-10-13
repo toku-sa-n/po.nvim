@@ -1,4 +1,4 @@
-local M = {}
+local m = {}
 
 local function fetch_next()
 	return {
@@ -7,6 +7,6 @@ local function fetch_next()
 	}
 end
 
-M.fetch_next = fetch_next
+m.fetch_next = fetch_next
 
-return M
+return m
