@@ -1,6 +1,6 @@
 local async = require("plenary.async")
 
-local M = {}
+local m = {}
 
 ---@param filename string The name of the po file.
 ---@param statistics_lang string The language of the statistics text.
@@ -8,6 +8,7 @@ local M = {}
 local function fetch(filename, statistics_lang)
 	local async_system = async.wrap(vim.system, 3)
 
+	---@type {code: number, stderr: string}
 	local obj = async_system(
 		{ "msgfmt", "--statistics", "--output-file=/dev/null", filename },
 		{ env = { LANG = statistics_lang }, text = true }
@@ -22,6 +23,6 @@ local function fetch(filename, statistics_lang)
 	return s
 end
 
-M.fetch = fetch
+m.fetch = fetch
 
-return M
+return m
