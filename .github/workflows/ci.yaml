@@ -59,7 +59,7 @@ jobs:
       - name: Install gettext and libfuse2
         run: sudo apt-get install -y gettext libfuse2
 
-        # We download Neovim from the GitHub releases page, as the version in
+        # We download Neovim from the GitHub releases page as the version in
         # the Ubuntu repositories is outdated.
       - name: Download Neovim
         run: |
