@@ -21,7 +21,7 @@ local m = {}
 
 ---@param current_line_number number The current line number.
 ---@param get_line fun(line_number : number) : string A function that returns the line content of the given line number.
----@return LineNavigator A new instance of LineNavigator.
+---@return LineNavigator instance The new instance of LineNavigator.
 local function new(current_line_number, get_line)
 	local self = setmetatable({}, line_navigator)
 
