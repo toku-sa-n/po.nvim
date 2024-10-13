@@ -29,7 +29,7 @@ jobs:
       - name: Run msgfmt
         run: |
           shopt -s globstar
-          msgfmt --check --verbose --output-file=/dev/null **/*.po
+          msgfmt --check --output-file=/dev/null **/*.po
 
   prettier:
     runs-on: ubuntu-latest
