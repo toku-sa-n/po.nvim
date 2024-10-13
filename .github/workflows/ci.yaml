@@ -49,8 +49,7 @@ jobs:
 
     strategy:
       matrix:
-        include:
-          - neovim: ["v0.10.1", "v0.10.2"]
+        neovim: ["v0.10.1", "v0.10.2"]
 
     steps:
       - name: Checkout
