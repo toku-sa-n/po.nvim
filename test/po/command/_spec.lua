@@ -1,5 +1,15 @@
-describe("test", function()
-	it("should pass", function()
-		assert.are.equal(1, 1)
+require("po.command").setup()
+
+describe("Po command", function()
+	it("should exist", function()
+		local commands = vim.api.nvim_get_commands({})
+
+		assert.not_nil(commands["Po"])
+	end)
+end)
+
+describe(":Po jump next", function()
+	it("should exist", function()
+		vim.cmd("Po jump next")
 	end)
 end)
