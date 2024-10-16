@@ -16,7 +16,10 @@ describe(":Po jump next", function()
 		vim.cmd("Po jump next")
 
 		assert_cursor_position(13, 8)
+	end)
 
+	it("jumps to another untranslated entry after the first jump", function()
+		vim.cmd("Po jump next")
 		vim.cmd("Po jump next")
 
 		assert_cursor_position(16, 8)
