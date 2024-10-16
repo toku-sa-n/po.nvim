@@ -1,21 +1,24 @@
 local m = {}
 
 local subcommands = {
-	["jump next"] = {
-		function()
-			print("Jumping to next")
-		end,
-	},
+	["jump next"] = function()
+		print("Jumping to next")
+	end,
 }
+
+local function show_error_message(args)
+	local msg = "Unknown subcommand: Po " .. table.concat(args, " ")
+	vim.api.nvim_err_writeln(msg)
+end
 
 ---@param opts { fargs: string[] }
 local function po_handler(opts)
-	local args = table.concat(opts, " ")
+	local args = table.concat(opts.fargs, " ")
 
 	if subcommands[args] then
 		subcommands[args]()
 	else
-		print("Unknown subcommand: " .. args)
+		show_error_message(opts.fargs)
 	end
 end
 
