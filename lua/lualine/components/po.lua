@@ -10,7 +10,7 @@ local m = require("lualine.component"):extend()
 local statusline = ""
 
 function m:init(options)
-	m.super.init(self, options)
+	m.super:init(options)
 end
 
 function m.update_status()
