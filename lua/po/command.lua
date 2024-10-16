@@ -2,7 +2,7 @@ local m = {}
 
 local subcommands = {
 	["jump next"] = function()
-		print("Jumping to next")
+		vim.fn.cursor(13, 8)
 	end,
 }
 
