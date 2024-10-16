@@ -8,10 +8,6 @@ describe(":Po jump next", function()
 		assert.are.same({ 1, 1 }, { vim.fn.line("."), vim.fn.col(".") })
 	end)
 
-	it("should exist", function()
-		vim.cmd("Po jump next")
-	end)
-
 	it("jumps to the next untranslated entry", function()
 		vim.cmd("Po jump next")
 
