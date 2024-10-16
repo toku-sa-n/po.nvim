@@ -26,7 +26,7 @@ local function po_handler(opts)
 end
 
 function m.setup()
-	vim.api.nvim_create_user_command("Po", po_handler, { nargs = "*" })
+	vim.api.nvim_create_user_command("Po", po_handler, { nargs = "*", description = "Po.nvim commands" })
 end
 
 return m
