@@ -1,9 +1,11 @@
 local m = {}
 
+local function handle_jump_next()
+	vim.fn.cursor(13, 8)
+end
+
 local subcommands = {
-	["jump next"] = function()
-		vim.fn.cursor(13, 8)
-	end,
+	["jump next"] = handle_jump_next,
 }
 
 local function show_error_message(args)
