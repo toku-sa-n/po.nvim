@@ -8,6 +8,7 @@ local subcommands = {
 
 local function show_error_message(args)
 	local msg = "Unknown subcommand: Po " .. table.concat(args, " ")
+
 	vim.api.nvim_err_writeln(msg)
 end
 
