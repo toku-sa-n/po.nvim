@@ -4,7 +4,7 @@ local function handle_jump_next()
 	local line = vim.fn.search('msgstr\\(\\_s*""\\)\\+\\(\\_s*"[^"]\\+\\)\\@!', "w")
 
 	if line == 0 then
-		vim.api.nvim_err_writeln("No untranslated entries found")
+		print("No untranslated entries found")
 		return
 	end
 
