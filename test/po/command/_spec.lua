@@ -1,16 +1,20 @@
 require("po.command").setup()
 
+local function assert_cursor_position(line, col)
+	assert.are.same({ line, col }, { vim.fn.line("."), vim.fn.col(".") })
+end
+
 describe(":Po jump next", function()
 	before_each(function()
 		vim.cmd("e test/po/command/ja.po")
 
 		vim.fn.cursor(1, 1)
-		assert.are.same({ 1, 1 }, { vim.fn.line("."), vim.fn.col(".") })
+		assert_cursor_position(1, 1)
 	end)
 
 	it("jumps to the next untranslated entry", function()
 		vim.cmd("Po jump next")
 
-		assert.are.same({ 13, 8 }, { vim.fn.line("."), vim.fn.col(".") })
+		assert_cursor_position(13, 8)
 	end)
 end)
