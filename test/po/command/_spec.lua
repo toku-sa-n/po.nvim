@@ -16,5 +16,9 @@ describe(":Po jump next", function()
 		vim.cmd("Po jump next")
 
 		assert_cursor_position(13, 8)
+
+		vim.cmd("Po jump next")
+
+		assert_cursor_position(16, 8)
 	end)
 end)

@@ -11,3 +11,6 @@ msgstr ""
 
 msgid "Untranslated"
 msgstr ""
+
+msgid "Untranslated second"
+msgstr ""
