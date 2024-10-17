@@ -22,3 +22,6 @@ msgstr ""
 # Comments
 msgid "Untranslated with comments"
 msgstr ""
+
+msgid "Another translated"
+msgstr "翻訳済み"

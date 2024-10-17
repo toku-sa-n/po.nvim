@@ -41,4 +41,12 @@ describe(":Po jump next", function()
 
 		assert_cursor_position(24, 8)
 	end)
+
+	it("wraps around to the first untranslated entry", function()
+		vim.fn.cursor(25, 1)
+
+		vim.cmd("Po jump next")
+
+		assert_cursor_position(13, 8)
+	end)
 end)
