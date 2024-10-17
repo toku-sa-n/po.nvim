@@ -23,5 +23,9 @@ msgstr ""
 msgid "Untranslated with comments"
 msgstr ""
 
+msgctxt "Some context"
+msgid "Untranslated with context"
+msgstr ""
+
 msgid "Another translated"
 msgstr "翻訳済み"
