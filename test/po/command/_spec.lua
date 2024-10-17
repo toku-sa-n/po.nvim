@@ -27,10 +27,10 @@ describe(":Po jump next", function()
 	end)
 
 	it("jumps to the next untranslated entry with comments", function()
-		vim.fn.cursor(16, 1)
+		vim.fn.cursor(17, 1)
 
 		vim.cmd("Po jump next")
 
-		assert_cursor_position(19, 8)
+		assert_cursor_position(20, 8)
 	end)
 end)

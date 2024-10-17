@@ -15,5 +15,6 @@ msgstr ""
 msgid "Untranslated second"
 msgstr ""
 
+# Comments
 msgid "Untranslated with comments"
 msgstr ""
