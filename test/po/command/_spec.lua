@@ -47,7 +47,7 @@ describe(":Po jump next", function()
 
 		vim.cmd("Po jump next")
 
-		assert_cursor_position(32, 8)
+		assert_cursor_position(32, 11)
 	end)
 
 	it("ignores a translated entry with multiple lines of msgstr", function()
