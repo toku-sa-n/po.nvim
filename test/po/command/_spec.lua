@@ -27,10 +27,18 @@ describe(":Po jump next", function()
 	end)
 
 	it("jumps to the next untranslated entry with comments", function()
+		vim.fn.cursor(21, 1)
+
+		vim.cmd("Po jump next")
+
+		assert_cursor_position(24, 8)
+	end)
+
+	it("ignores a translated entry with multiple lines of msgstr", function()
 		vim.fn.cursor(17, 1)
 
 		vim.cmd("Po jump next")
 
-		assert_cursor_position(20, 8)
+		assert_cursor_position(24, 8)
 	end)
 end)
