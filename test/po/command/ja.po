@@ -31,5 +31,10 @@ msgid "Apple"
 msgid_plural "Apples"
 msgstr[0] ""
 
+#, fuzzy
+#| msgid "foo"
+msgid "bar"
+msgstr "foo"
+
 msgid "Another translated"
 msgstr "翻訳済み"
