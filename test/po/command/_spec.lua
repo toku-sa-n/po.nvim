@@ -59,7 +59,7 @@ describe(":Po jump next", function()
 	end)
 
 	it("wraps around to the first untranslated entry", function()
-		vim.fn.cursor(29, 1)
+		vim.fn.cursor(33, 1)
 
 		vim.cmd("Po jump next")
 

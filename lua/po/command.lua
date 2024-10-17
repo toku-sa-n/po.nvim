@@ -1,15 +1,14 @@
 local m = {}
 
 local function handle_jump_next()
-	local line = vim.fn.search('msgstr\\(\\_s*""\\)\\+\\(\\_s*"[^"]\\+\\)\\@!', "w")
+	local line = vim.fn.search('msgstr\\(\\[\\d\\+\\]\\)\\?\\(\\_s*""\\)\\+\\(\\_s*"[^"]\\+\\)\\@!', "w")
 
 	if line == 0 then
 		print("No untranslated entries found")
 		return
 	end
 
-	-- Locate the cursor at the first " of the msgstr line.
-	vim.fn.cursor(line, 8)
+	vim.cmd('normal! f"')
 end
 
 local subcommands = {
