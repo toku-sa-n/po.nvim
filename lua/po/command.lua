@@ -1,7 +1,7 @@
 local m = {}
 
 local function handle_jump_next()
-	local line = vim.fn.search('msgstr\\(\\[\\d\\+\\]\\)\\?\\(\\_s*""\\)\\+\\(\\_s*"[^"]\\+\\)\\@!', "w")
+	local line = vim.fn.search('\\vmsgstr(\\[\\d+\\])?(\\_s*"")+(\\_s*"[^"]+)@!', "w")
 
 	if line == 0 then
 		print("No untranslated entries found")
