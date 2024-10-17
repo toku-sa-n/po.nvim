@@ -15,6 +15,10 @@ msgstr ""
 msgid "Untranslated second"
 msgstr ""
 
+msgid "Translated"
+msgstr ""
+"翻訳済み"
+
 # Comments
 msgid "Untranslated with comments"
 msgstr ""
