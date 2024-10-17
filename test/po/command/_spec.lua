@@ -42,6 +42,14 @@ describe(":Po jump next", function()
 		assert_cursor_position(28, 8)
 	end)
 
+	it("jumps to the next plural untranslated entry", function()
+		vim.fn.cursor(29, 1)
+
+		vim.cmd("Po jump next")
+
+		assert_cursor_position(32, 8)
+	end)
+
 	it("ignores a translated entry with multiple lines of msgstr", function()
 		vim.fn.cursor(17, 1)
 

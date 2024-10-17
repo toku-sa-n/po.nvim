@@ -27,5 +27,9 @@ msgctxt "Some context"
 msgid "Untranslated with context"
 msgstr ""
 
+msgid "Apple"
+msgid_plural "Apples"
+msgstr[0] ""
+
 msgid "Another translated"
 msgstr "翻訳済み"
