@@ -4,6 +4,7 @@ Neovim plugin for editing GNU gettext PO files
 
 ## Features
 
+- Commands for PO file editing
 - Component for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) which prints the current translation status of the PO file
 
 ## Installation
@@ -21,6 +22,13 @@ return {
 ```
 
 ## Usage
+
+### Commands
+
+This plugin provides the following commands:
+
+- `:Po jump next` - Jump to the next untranslated or fuzzy message
+- `:Po jump prev` - Jump to the previous untranslated or fuzzy message
 
 ### po.nvim component for lualine.nvim
 
