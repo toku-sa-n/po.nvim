@@ -10,10 +10,19 @@ end
 
 ---@param opts { fargs: string[] }
 local function po_handler(opts)
-	local args = table.concat(opts.fargs, " ")
+	local current_level = subcommands
 
-	if subcommands[args] then
-		subcommands[args]()
+	for _, arg in ipairs(opts.fargs) do
+		if current_level[arg] then
+			current_level = current_level[arg]
+		else
+			show_error_message(opts.fargs)
+			return
+		end
+	end
+
+	if type(current_level) == "function" then
+		current_level()
 	else
 		show_error_message(opts.fargs)
 	end
