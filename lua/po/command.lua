@@ -1,11 +1,6 @@
-local jump = require("po.jump")
+local subcommands = require("po.command.subcommands")
 
 local m = {}
-
-local subcommands = {
-	["jump next"] = jump.forward,
-	["jump prev"] = jump.backward,
-}
 
 local function show_error_message(args)
 	local msg = "Unknown subcommand: Po " .. table.concat(args, " ")
