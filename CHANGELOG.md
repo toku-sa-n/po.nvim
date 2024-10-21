@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-10-21
+
 ### Added
 
 - `:Po jump next` and `:Po jump prev` commands to jump to the next or previous untranslated or fuzzy message ([#18] and [#24])
@@ -20,5 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#24]: https://github.com/toku-sa-n/po.nvim/pull/24
 [#18]: https://github.com/toku-sa-n/po.nvim/pull/18
 [#5]: https://github.com/toku-sa-n/po.nvim/pull/5
-[Unreleased]: https://github.com/toku-sa-n/po.nvim/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/toku-sa-n/po.nvim/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/toku-sa-n/po.nvim/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/toku-sa-n/po.nvim/releases/tag/0.1.0
