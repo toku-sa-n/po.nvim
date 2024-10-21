@@ -1,3 +1,4 @@
+local completion = require("po.command.completion")
 local subcommands = require("po.command.subcommands")
 
 local m = {}
@@ -29,7 +30,11 @@ local function po_handler(opts)
 end
 
 function m.setup()
-	vim.api.nvim_create_user_command("Po", po_handler, { nargs = "*", desc = "Po.nvim commands" })
+	vim.api.nvim_create_user_command(
+		"Po",
+		po_handler,
+		{ nargs = "*", desc = "Po.nvim commands", complete = completion.complete }
+	)
 end
 
 return m
