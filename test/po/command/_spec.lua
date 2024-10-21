@@ -134,6 +134,14 @@ describe(":Po jump prev", function()
 		assert_cursor_position(37, 8)
 	end)
 
+	it("jumps to the previous untranslated entry when the cursor is on a fuzzy entry", function()
+		vim.fn.cursor(37, 1)
+
+		vim.cmd("Po jump prev")
+
+		assert_cursor_position(32, 11)
+	end)
+
 	it("wraps around to the last untranslated entry", function()
 		vim.fn.cursor(21, 1)
 
