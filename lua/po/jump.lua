@@ -1,9 +1,7 @@
 local m = {}
 
-local regexes = {
-	untranslated_or_fuzzy = [[\v^msgstr(\[\d+\])?(\_s*"")+(\_s*"[^"]+)@!|^#, fuzzy]],
-	msgstr = [[\v^msgstr(\[\d+\])?\_s*"]],
-}
+local untranslated_or_fuzzy_regex =
+	[[\v^msgstr(\[\d+\])?(\_s*"\ze")+(\_s*"[^"]+)@!|^#, fuzzy\_.{-}msgstr(\_s*"\ze[^"]+)+]]
 
 ---@enum direction
 local direction = {
@@ -14,19 +12,12 @@ local direction = {
 local function jump(dir)
 	assert(dir == direction.FORWARD or dir == direction.BACKWARD, "Invalid direction")
 
-	local options = dir == direction.FORWARD and "w" or "bwz"
+	local options = dir == direction.FORWARD and "we" or "bwze"
 
-	local untranslated_or_fuzzy_line = vim.fn.search(regexes.untranslated_or_fuzzy, options)
+	local untranslated_or_fuzzy_line = vim.fn.search(untranslated_or_fuzzy_regex, options)
 
 	if untranslated_or_fuzzy_line == 0 then
 		print("No entry to jump to.")
-		return
-	end
-
-	local msgstr_line = vim.fn.search(regexes.msgstr, "wce")
-
-	if msgstr_line == 0 then
-		error("`msgstr` line not found")
 		return
 	end
 end
