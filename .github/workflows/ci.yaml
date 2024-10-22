@@ -90,3 +90,15 @@ jobs:
 
       - name: Run tests
         run: $HOME/nvim.appimage --headless -c "PlenaryBustedDirectory test/"
+
+  type-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+
+      - name: Type check
+        uses: mrcjkb/lua-typecheck-action@a0294260025e6aee0e5777b9f87236ecede98c11 # v1.0.0
+        with:
+          checklevel: Hint
