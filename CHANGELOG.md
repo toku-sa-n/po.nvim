@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2024-10-22
+
 ### Fixed
 
 - Fixed a bug of `:Po jump` commands not jumping between fuzzy entries with multiple lines ([#28])
@@ -27,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#24]: https://github.com/toku-sa-n/po.nvim/pull/24
 [#18]: https://github.com/toku-sa-n/po.nvim/pull/18
 [#5]: https://github.com/toku-sa-n/po.nvim/pull/5
-[Unreleased]: https://github.com/toku-sa-n/po.nvim/compare/0.2.0...HEAD
+[Unreleased]: https://github.com/toku-sa-n/po.nvim/compare/0.2.1...HEAD
+[0.2.1]: https://github.com/toku-sa-n/po.nvim/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/toku-sa-n/po.nvim/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/toku-sa-n/po.nvim/releases/tag/0.1.0
