@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed a bug of `:Po jump` commands not jumping between fuzzy entries with multiple lines ([#28])
+
 ## [0.2.0] - 2024-10-21
 
 ### Added
@@ -19,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Component for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) which prints the current translation status of the PO file ([#5])
 
+[#28]: https://github.com/toku-sa-n/po.nvim/pull/28
 [#24]: https://github.com/toku-sa-n/po.nvim/pull/24
 [#18]: https://github.com/toku-sa-n/po.nvim/pull/18
 [#5]: https://github.com/toku-sa-n/po.nvim/pull/5
