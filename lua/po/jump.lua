@@ -1,7 +1,7 @@
 local m = {}
 
 local untranslated_or_fuzzy_regex =
-	[[\v^msgstr(\[\d+\])?(\_s*"\ze")+(\_s*"[^"]+)@!|^#, fuzzy\_.{-}msgstr(\_s*"\ze[^"]+)+]]
+	[[\v^msgstr(\[\d+\])?(\_s*"\ze")+(\_s*"[^"]+)@!|^#, fuzzy\_.{-}msgstr\_s*"\ze[^"]*"]]
 
 ---@enum direction
 local direction = {

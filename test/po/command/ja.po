@@ -39,7 +39,8 @@ msgstr "foo"
 #, fuzzy
 #| msgid "Tom"
 msgid "Jerry"
-msgstr "トム"
+msgstr ""
+"トム"
 
 msgid "Another translated"
 msgstr "翻訳済み"
