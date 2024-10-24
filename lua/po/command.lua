@@ -1,6 +1,3 @@
-local completion = require("po.command.completion")
-local subcommands = require("po.command.subcommands")
-
 local m = {}
 
 local function show_error_message(args)
@@ -11,7 +8,7 @@ end
 
 ---@param opts { fargs: string[] }
 local function po_handler(opts)
-	local current_level = subcommands
+	local current_level = require("po.command.subcommands")
 
 	for _, arg in ipairs(opts.fargs) do
 		if current_level[arg] then
@@ -30,6 +27,8 @@ local function po_handler(opts)
 end
 
 function m.setup()
+	local completion = require("po.command.completion")
+
 	vim.api.nvim_buf_create_user_command(
 		0, -- Current buffer
 		"Po",
