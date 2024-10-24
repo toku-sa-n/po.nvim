@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- This plugin is now loaded only when a PO file is opened ([#32])
+
 ## [0.2.1] - 2024-10-22
 
 ### Fixed
@@ -25,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Component for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) which prints the current translation status of the PO file ([#5])
 
+[#32]: https://github.com/toku-sa-n/po.nvim/pull/32
 [#28]: https://github.com/toku-sa-n/po.nvim/pull/28
 [#24]: https://github.com/toku-sa-n/po.nvim/pull/24
 [#18]: https://github.com/toku-sa-n/po.nvim/pull/18
