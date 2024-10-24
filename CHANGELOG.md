@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - This plugin is now loaded only when a PO file is opened ([#32])
 - The `:Po` command is now registered only for buffers with the `po` filetype ([#34])
+- Lua modules are now loaded lazily ([#35])
 
 ## [0.2.1] - 2024-10-22
 
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Component for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) which prints the current translation status of the PO file ([#5])
 
+[#35]: https://github.com/toku-sa-n/po.nvim/pull/35
 [#34]: https://github.com/toku-sa-n/po.nvim/pull/34
 [#32]: https://github.com/toku-sa-n/po.nvim/pull/32
 [#28]: https://github.com/toku-sa-n/po.nvim/pull/28
