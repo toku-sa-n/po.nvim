@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `:checkhealth po` command to check the health of the plugin ([#36])
+- In-Neovim document ([#37])
 
 ### Changed
 
@@ -35,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Component for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) which prints the current translation status of the PO file ([#5])
 
+[#37]: https://github.com/toku-sa-n/po.nvim/pull/37
 [#36]: https://github.com/toku-sa-n/po.nvim/pull/36
 [#35]: https://github.com/toku-sa-n/po.nvim/pull/35
 [#34]: https://github.com/toku-sa-n/po.nvim/pull/34
