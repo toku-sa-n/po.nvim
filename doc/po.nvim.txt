@@ -1,0 +1,75 @@
+*po.nvim.txt*	Neovim plugin for editing GNU gettext PO files
+
+==============================================================================
+CONTENTS						*po.nvim-contents*
+
+	1. Introduction			|po.nvim-introduction|
+	2. Configuration		|po.nvim-configuration|
+	3. Commands			|po.nvim-commands|
+	4. Component for lualine.nvim	|po.nvim-lualine|
+	5. License			|po.nvim-license|
+
+==============================================================================
+1. Introduction						*po.nvim-introduction*
+
+`po.nvim` is a Neovim plugin for editing GNU gettext PO files. It provides
+commands for PO file editing, and a component for `lualine.nvim` which prints
+the current translation status of the PO file.
+
+==============================================================================
+2. Configuration					*po.nvim-configuration*
+
+`po.nvim` does not provide any configuration options.
+
+==============================================================================
+3. Commands						*po.nvim-commands*
+
+`po.nvim` provides the following commands:
+
+:Po jump prev						*po.nvim-jump-prev*
+	Jumps to the previous untranslated or fuzzy message.
+
+:Po jump next						*po.nvim-jump-next*
+	Jumps to the next untranslated or fuzzy message.
+
+==============================================================================
+4. Component for lualine.nvim				*po.nvim-lualine*
+
+`po.nvim` provides a component for `lualine.nvim` which prints the current
+translation status of the PO file. Add the `po` component to the `lualine.nvim`
+configuration as follows:
+>
+lualine.setup({
+    opts = {
+	sections = {
+	    lualine_a = { "mode" },
+	    lualine_b = { "branch", "diff", "diagnostics" },
+	    lualine_c = { "filename" },
+	    lualine_x = { "po", "encoding", "fileformat", "filetype" },
+	    lualine_y = { "progress" },
+	    lualine_z = { "location" },
+	},
+    }
+})
+<
+Note that you need `msgfmt` to be installed in order to use the po component.
+
+==============================================================================
+5. License						*po.nvim-license*
+
+Copyright (C) 2024 Hiroki Tokunaga
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+details.
+
+You should have received a copy of the GNU Affero General Public License along
+with this program. If not, see https://www.gnu.org/licenses/.
+
+ vim:tw=78:ts=8:sw=8:noet:ft=help:norl:
