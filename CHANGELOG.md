@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2024-10-26
+
 ### Added
 
 - `:checkhealth po` command to check the health of the plugin ([#36])
@@ -45,7 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#24]: https://github.com/toku-sa-n/po.nvim/pull/24
 [#18]: https://github.com/toku-sa-n/po.nvim/pull/18
 [#5]: https://github.com/toku-sa-n/po.nvim/pull/5
-[Unreleased]: https://github.com/toku-sa-n/po.nvim/compare/0.2.1...HEAD
+[Unreleased]: https://github.com/toku-sa-n/po.nvim/compare/0.3.0...HEAD
+[0.3.0]: https://github.com/toku-sa-n/po.nvim/compare/0.2.1...0.3.0
 [0.2.1]: https://github.com/toku-sa-n/po.nvim/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/toku-sa-n/po.nvim/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/toku-sa-n/po.nvim/releases/tag/0.1.0
